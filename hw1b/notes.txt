@@ -1,0 +1,17 @@
+1. Distribution Shape
+Yes. The histogram do have a long tail in right side. Most requests cluster around 80–90ms, while a small fraction is >100ms.
+
+2. Consistency
+Response times are mostly consistent around 75–90ms, but there is a spike between request 90–120 where latency increases to 120–150ms.
+
+3. Percentiles
+The median response time is around 80ms, while the 95th percentile rises to 110ms, resulting in a 30ms gap.
+
+4. Infrastructure Impact
+It might be due to the limited CPU and memory capacity, and unstable network resources.
+
+5. Scaling Implications
+Latency would likely increase significantly due to request queueing. The tail of the graph will be prolonged.
+
+6. Network vs. Processing
+It could be caused by either network latency or server processing time. We can run this locally on EC2 to exclude network effect. We can also use curl to separate timing components.
