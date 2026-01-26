@@ -17,14 +17,29 @@ provider "aws" {
 
 # Your ec2 instance
 resource "aws_instance" "demo-instance" {
+  count                  = 2
   ami                    = data.aws_ami.al2023.id
   instance_type          = "t2.micro"
   iam_instance_profile   = "LabInstanceProfile"
   vpc_security_group_ids = [aws_security_group.ssh.id]
   key_name               = var.ssh_key_name
 
+  user_data = <<-EOF
+    #!/bin/bash
+    set -eux
+
+    sudo dnf update -y
+    sudo dnf install -y docker git rsync
+
+    sudo systemctl enable docker
+    sudo systemctl start docker
+
+    sudo usermod -aG docker ec2-user
+  EOF
+
+
   tags = {
-    Name = "terraform-created-instance-:)"
+    Name = "terraform-created-instance-${count.index + 1}"
   }
 }
 
@@ -40,6 +55,16 @@ resource "aws_security_group" "ssh" {
     protocol    = "tcp"
     cidr_blocks = [var.ssh_cidr]
   }
+
+  # App port (8080)
+  ingress {
+    description = "App 8080"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -59,5 +84,5 @@ data "aws_ami" "al2023" {
 }
 
 output "ec2_public_dns" {
-  value = aws_instance.demo-instance.public_dns
+  value = aws_instance.demo-instance[*].public_dns
 }

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "sessionId": "3c411613-1069-4e79-aa54-8c9f368b9a5b",
+      "fullPath": "/home/ec2-user/.claude/projects/-home-ec2-user-mystery/3c411613-1069-4e79-aa54-8c9f368b9a5b.jsonl",
+      "fileMtime": 1769308365054,
+      "firstPrompt": "what do we have here in this folder?",
+      "summary": "Folder exploration conversation interrupted",
+      "messageCount": 2,
+      "created": "2026-01-25T02:24:05.164Z",
+      "modified": "2026-01-25T02:24:44.357Z",
+      "gitBranch": "",
+      "projectPath": "/home/ec2-user/mystery",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "2e4637a4-6961-4bc4-ad38-14623285713e",
+      "fullPath": "/home/ec2-user/.claude/projects/-home-ec2-user-mystery/2e4637a4-6961-4bc4-ad38-14623285713e.jsonl",
+      "fileMtime": 1769308735776,
+      "firstPrompt": "what's inside this folder? what are the contents? what are they used for?",
+      "summary": "AWS Lambda Go Album API with Race Conditions",
+      "messageCount": 4,
+      "created": "2026-01-25T02:33:02.613Z",
+      "modified": "2026-01-25T02:33:41.192Z",
+      "gitBranch": "",
+      "projectPath": "/home/ec2-user/mystery",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "05d43f0e-76ec-433f-931e-835b6c1efabf",
+      "fullPath": "/home/ec2-user/.claude/projects/-home-ec2-user-mystery/05d43f0e-76ec-433f-931e-835b6c1efabf.jsonl",
+      "fileMtime": 1769309219819,
+      "firstPrompt": "what did i just do? what's new now? what happened?",
+      "summary": "Built Go AWS Lambda Function",
+      "messageCount": 4,
+      "created": "2026-01-25T02:38:54.344Z",
+      "modified": "2026-01-25T02:39:54.508Z",
+      "gitBranch": "",
+      "projectPath": "/home/ec2-user/mystery",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "27624518-09d1-4ce8-8a1b-95fc5413a0fa",
+      "fullPath": "/home/ec2-user/.claude/projects/-home-ec2-user-mystery/27624518-09d1-4ce8-8a1b-95fc5413a0fa.jsonl",
+      "fileMtime": 1769309502610,
+      "firstPrompt": "why i cannot use the lambda URL? [ec2-user@ip-172-31-21-237 mystery]$ curl -i https://4zb7uygt2fpxp6zzmgabqaqeji0jrogc.lambda-url.us-west-2.on.aws/ HTTP/1.1 403 Forbidden Date: Sun, 25 Jan 2026 02:46:…",
+      "summary": "Lambda Function URL 403 Forbidden Access Denied Issue",
+      "messageCount": 2,
+      "created": "2026-01-25T02:46:58.984Z",
+      "modified": "2026-01-25T02:47:09.433Z",
+      "gitBranch": "",
+      "projectPath": "/home/ec2-user/mystery",
+      "isSidechain": false
+    }
+  ],
+  "originalPath": "/home/ec2-user/mystery"
+}
